@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Toko Buku</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="login-body" onload="initLoginPage()">
+
+  <div class="login-container">
+    <div class="login-left glass">  
+      <div class="login-content">
+        <h1 class="login-title">Selamat Datang di <span>Toko Buku</span></h1>
+        <p class="login-sub">Masuk dengan akunmu untuk melanjutkan</p>
+
+        <form id="loginForm" class="form">
+          <label for="email">Email</label>
+          <input id="email" type="email" placeholder="Masukkan Email" required />
+
+          <label for="password">Password</label>
+          <input id="password" type="password" placeholder="Masukkan password" required />
+
+          <button class="btn primary full" type="submit">Masuk</button>
+        </form>
+
+        <div class="login-links">
+          <p class="register-link">Belum punya akun? <a href="register.html">Daftar</a></p>
+          <p class="forgot-link"><a href="forgot-password.html">Lupa Password?</a></p>
+        </div>
+
+        <p class="info-muted">Akun login resmi disembunyikan — gunakan akunmu.</p>
+      </div>
+    </div>
+
+    <div class="login-right">
+    </div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

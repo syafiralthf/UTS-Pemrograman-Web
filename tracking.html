@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Tracking Pesanan • Toko Buku</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body onload="initTrackingPage()">
+  <header class="navbar glass">
+    <a class="btn secondary small" href="dashboard.html">← Dashboard</a>
+    <div><strong>Tracking Pesanan</strong></div>
+    <div></div>
+  </header>
+
+  <main class="container glass">
+    <form id="trackingForm" class="form">
+      <label>Nomor DO</label>
+      <input id="noDO" type="text" placeholder="Masukkan Nomor DO" required>
+      <button class="btn primary full" type="submit">Lacak Pesanan</button>
+    </form>
+
+    <div id="trackingResult" class="result"></div>
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

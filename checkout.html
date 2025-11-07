@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Checkout • Toko Buku</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body onload="initCheckoutPage()">
+
+  <header class="navbar glass">
+    <a class="btn secondary small" href="dashboard.html">← Dashboard</a>
+    <div><strong>Pemesanan</strong></div>
+    <div></div>
+  </header>
+
+  <main class="container glass">
+    <form id="orderForm" class="form">
+      <label>Nama Pemesan</label>
+      <input id="nama" type="text" placeholder="Nama lengkap" required>
+
+      <label>Alamat</label>
+      <input id="alamat" type="text" placeholder="Alamat lengkap" required>
+
+      <label>Telepon</label>
+      <input id="telepon" type="text" placeholder="Nomor telepon" required>
+
+      <label>Email</label>
+      <input id="email" type="email" placeholder="Email" required>
+
+      <label>Pilih Buku</label>
+      <select id="bukuSelect" required></select>
+
+      <label>Jumlah</label>
+      <input id="jumlah" type="number" min="1" value="1" required>
+
+      <label>Metode Pembayaran</label>
+      <select id="pembayaran" required>
+        <option value="">Pilih Metode Pembayaran</option>
+        <option value="Transfer Bank">Transfer Bank</option>
+        <option value="E-Wallet">E-Wallet (Dana, OVO, GoPay)</option>
+        <option value="COD">Bayar di Tempat (COD)</option>
+        <option value="Kartu Kredit">Kartu Kredit / Debit</option>
+      </select>
+
+      <button class="btn primary full" type="submit">Pesan Sekarang</button>
+    </form>
+
+    <div id="orderResult" class="result"></div>
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

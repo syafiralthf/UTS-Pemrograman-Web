@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dashboard • Toko Buku</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body onload="initDashboard()">
+  <header class="navbar glass animate-fade-in">
+    <div class="brand">
+      <strong>Toko Buku</strong>
+    </div>
+    <div class="nav-actions">
+      <span id="greeting" class="muted animate-fade-in-delay"></span>
+      <span id="currentTime" class="muted animate-fade-in-delay" style="margin-left: 1rem;"></span>
+      <button id="btnLogout" class="btn secondary">Keluar</button>
+    </div>
+  </header>
+
+  <main class="container glass animate-slide-up">
+    <h1>Selamat Datang, Di Toko Buku</h1>
+    <h2>Menu</h2>
+    <div class="card-grid">
+      <a class="card glass animate-card" href="stok.html"><h3>Katalog Buku</h3><p>Lihat & pilih buku</p></a>
+      <a class="card glass animate-card" href="checkout.html"><h3>Pemesanan</h3><p>Buat pesanan</p></a>
+      <a class="card glass animate-card" href="tracking.html"><h3>Tracking</h3><p>Lacak DO</p></a>
+      <a class="card glass animate-card" href="#" onclick="showHistory()"><h3>History Transaksi</h3><p>Daftar transaksi</p></a>
+      <a class="card glass animate-card" href="#" onclick="showLaporan()"><h3>Laporan Pemesanan</h3><p>Laporan ringkasan</p></a>
+    </div>
+
+    <section id="historySection" style="display:none; margin-top: 2rem;">
+      <h3>History Transaksi</h3>
+      <div id="historyList"></div>
+      <button onclick="hideSections()" class="btn secondary" style="margin-top: 1rem;">Tutup History</button>
+    </section>
+
+    <section id="laporanSection" style="display:none; margin-top: 2rem;">
+      <h3>Laporan Pemesanan</h3>
+      <div id="laporanContent"></div>
+      <button onclick="hideSections()" class="btn secondary" style="margin-top: 1rem;">Tutup Laporan</button>
+    </section>
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
